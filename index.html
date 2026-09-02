@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basis Latin Grade 5 &middot; Flashcards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone: #2b2620;
+    --stone-light: #3c352c;
+    --gold: #b8892b;
+    --gold-bright: #d9a840;
+    --plaster: #ece4d3;
+    --plaster-dim: #c9beaa;
+    --wine: #7a2e2e;
+    --wine-bright: #a8433f;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(184,137,43,0.08), transparent 60%),
+      var(--stone);
+    color:var(--plaster);
+    font-family:'Source Serif 4', serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:56px 20px 60px;
+  }
+  header{
+    text-align:center;
+    max-width:640px;
+    margin-bottom:44px;
+  }
+  .kicker{
+    font-family:'Cinzel',serif;
+    font-size:13px;
+    letter-spacing:0.14em;
+    color:var(--gold-bright);
+    margin:0 0 10px;
+  }
+  h1{
+    font-family:'Cinzel',serif;
+    font-weight:700;
+    font-size:clamp(26px,4.5vw,38px);
+    margin:0 0 10px;
+    color:var(--plaster);
+  }
+  .sub{
+    color:var(--plaster-dim);
+    font-size:15px;
+    margin:0;
+    line-height:1.5;
+  }
+  .lessons{
+    width:100%;
+    max-width:560px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  a.lesson-card{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    background:var(--stone-light);
+    border:1px solid rgba(184,137,43,0.28);
+    border-radius:6px;
+    padding:22px 24px;
+    text-decoration:none;
+    color:var(--plaster);
+    transition:border-color .2s, transform .15s, background .2s;
+  }
+  a.lesson-card:hover{
+    border-color:var(--gold-bright);
+    background:#453c31;
+    transform:translateY(-1px);
+  }
+  .lesson-left{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .lesson-tag{
+    font-family:'Cinzel',serif;
+    font-size:12px;
+    letter-spacing:0.1em;
+    color:var(--gold-bright);
+  }
+  .lesson-title{
+    font-family:'Source Serif 4',serif;
+    font-size:19px;
+    font-weight:600;
+  }
+  .lesson-meta{
+    font-size:13px;
+    color:var(--plaster-dim);
+  }
+  .arrow{
+    font-family:'Cinzel',serif;
+    font-size:20px;
+    color:var(--gold);
+    flex-shrink:0;
+    transition:transform .15s;
+  }
+  a.lesson-card:hover .arrow{
+    transform:translateX(4px);
+  }
+  .lesson-card.placeholder{
+    opacity:0.4;
+    pointer-events:none;
+    border-style:dashed;
+  }
+  footer{
+    margin-top:48px;
+    font-size:12px;
+    color:rgba(236,228,211,0.35);
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="kicker">Basis &middot; Grade 5</p>
+  <h1>Latin Flashcards</h1>
+  <p class="sub">Interactive vocabulary practice, by unit.<br>Pick a lesson below to start studying.</p>
+</header>
+
+<div class="lessons">
+  <a class="lesson-card" href="unit1-vocab.html">
+    <div class="lesson-left">
+      <span class="lesson-tag">UNIT 1</span>
+      <span class="lesson-title">Testable Vocabulary</span>
+      <span class="lesson-meta">23 words &middot; flashcards, quiz mode &amp; pronunciation</span>
+    </div>
+    <span class="arrow">&rarr;</span>
+  </a>
+
+  <div class="lesson-card placeholder">
+    <div class="lesson-left">
+      <span class="lesson-tag">UNIT 2</span>
+      <span class="lesson-title">Coming soon</span>
+      <span class="lesson-meta">Will appear here once added</span>
+    </div>
+    <span class="arrow">&rarr;</span>
+  </div>
+</div>
+
+<footer>More units will be added here as lessons continue.</footer>
+
+</body>
+</html>
